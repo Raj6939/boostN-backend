@@ -19,6 +19,8 @@ app.use("/api/payments", paymentRoutes);
 
 app.get("/", (_, res) => res.send("Backend running"));
 
-app.listen(process.env.PORT || 4000, () =>
-  console.log("Server running")
-);
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
