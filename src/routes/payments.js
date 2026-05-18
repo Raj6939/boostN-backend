@@ -37,6 +37,7 @@ router.post("/create-checkout-session", async (req, res) => {
       mode: "payment",
       payment_method_types: ["card"],
       customer_email: customer.email,
+      billing_address_collection: "required",
       line_items: [
         {
           price_data: {
